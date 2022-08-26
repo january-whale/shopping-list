@@ -18,19 +18,17 @@ sendInput.addEventListener('keydown', function(event) {
             point.append(newPoint); /*для того, чтобы нельзя было отправить пустое сообщение*/
         }
 
+        newPoint.addEventListener('click', function() {
+            newPoint.classList.toggle('done');
+        })
+
         sendInput.value = ''; /*для очищения импута после ввода сообщения*/
 
     }
 
 })
 
-const allPoints = document.querySelectorAll('.items');
 
-for (let allPoint of allPoints) {
-    allPoint.addEventListener('click', function() {
-        allPoint.classList.toggle('done');
-    })
-}
 
 
 
